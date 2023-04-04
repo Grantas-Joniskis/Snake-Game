@@ -83,7 +83,7 @@ class Area {
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
     square.style.backgroundColor = 'white';
-    square.style.boxShadow = 'inset 0 0 0 1px #F3E8FF'; // TODO: Delete after
+    square.style.boxShadow = 'inset 0 0 0 1px #F3E8FF';
     row.append(square);
   }
 

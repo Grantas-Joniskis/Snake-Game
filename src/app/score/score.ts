@@ -15,13 +15,15 @@ class Score {
   public static generatePosition(): void {
     const excludedSquares = [Snake.getHeadPosition(), ...Snake.getBody()];
 
-    this.position = Math.floor(Math.random()
-    * (AreaManager.getTotalSquareNumber() - 1 + 1)) + 1;
+    this.position = this.generateNumber();
 
     while (excludedSquares.includes(this.position)) {
-      this.position = Math.floor(Math.random()
-      * (AreaManager.getTotalSquareNumber() - 1 + 1)) + 1;
+      this.position = this.generateNumber();
     }
+  }
+
+  private static generateNumber(): number {
+    return Math.floor(Math.random() * (AreaManager.getTotalSquareNumber() - 1 + 1)) + 1;
   }
 
   public static getPosition(): number {
